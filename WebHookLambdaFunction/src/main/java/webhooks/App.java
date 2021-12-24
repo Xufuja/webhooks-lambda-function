@@ -109,10 +109,10 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
             logger.log("Retrieved size in Bytes: " + size);
             if (size > this.sizeLimit) {
                 messages.delete();
-                logger.log("messages.txt has been deleted due to size constraints");
+                logger.log("The messages.txt file has been deleted due to size constraints");
             }
         } else {
-            logger.log("messages.txt does not exist");
+            logger.log("The messages.txt file does not exist");
         }
 
         try {

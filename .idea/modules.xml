@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WebHookLambdaFunction/HelloWorld.iml" filepath="$PROJECT_DIR$/WebHookLambdaFunction/HelloWorld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebHookLambdaFunction/WebHook.iml" filepath="$PROJECT_DIR$/WebHookLambdaFunction/WebHook.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebHookLambdaFunction.iml" filepath="$PROJECT_DIR$/WebHookLambdaFunction.iml" />
       <module fileurl="file://$PROJECT_DIR$/HelloWorldFunction/WebHooks.iml" filepath="$PROJECT_DIR$/HelloWorldFunction/WebHooks.iml" />
     </modules>
