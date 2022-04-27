@@ -42,9 +42,10 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
             return response.withStatusCode(500);
         }
     }
+
     public void createResponseValues(APIGatewayProxyRequestEvent input) throws IOException {
         String httpMethod = input.getHttpMethod();
-        logger.log("Entering try catch block with method: " + httpMethod);
+        //logger.log("Entering try catch block with method: " + httpMethod);
         switch (httpMethod) {
             case "GET": {
                 if (input.getHeaders().containsKey("X-GCS-Webhooks-Endpoint-Verification")) {
@@ -75,7 +76,7 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
                         logger.log(headerToPrint);
                     }
 
-                    PrintWriter printWriter = new PrintWriter(new FileOutputStream(new File(this.path), true));
+                    PrintWriter printWriter = new PrintWriter(new FileOutputStream(this.path, true));
                     logger.log("Writing to: " + this.path);
                     if (!headerToPrint.isEmpty()) {
                         printWriter.append(headerToPrint + System.lineSeparator());
@@ -97,10 +98,12 @@ public class App implements RequestHandler<APIGatewayProxyRequestEvent, APIGatew
             }
         }
     }
+
     public void setResponse(int returnCode, String returnMessage) {
         this.returnCode = returnCode;
         this.returnMessage = returnMessage;
     }
+
     public void whMessageStoreVerifier(String path) {
         File messages = new File(path);
         logger.log("Check if the file is bigger than limit in Bytes set to: " + this.sizeLimit);
